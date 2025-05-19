@@ -28,7 +28,7 @@ public class ApplicationContextSameBeanFindTest {
     @Test
     @DisplayName("타입으로 조회 시 같은 타입이 둘 이상이면 빈 이름을 지정하면 됨")
     void findBeanByName(){
-        MemberRepository memberRepository = ac.getBean("memberRepository1",MemberRepository.class);
+        MemberRepository memberRepository = ac.getBean("memberRepository",MemberRepository.class);
         assertThat(memberRepository).isInstanceOf(MemberRepository.class);
     }
 
